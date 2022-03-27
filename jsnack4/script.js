@@ -20,10 +20,11 @@ function decidiIfDispari(numeroInseritoDallUtente) {
 //---------------------------------------
 
 // il codice che runna
+//filtro l'array lanciando i prompt, ed esegio la funzione per decidere se è pari
 
 for (let i=0; i<6; i++){
-    let nuovoElemento = Number(prompt("Inserisci il "+(i+1)+"° elemento")); //number è un METODO per parsare la stringa in numero float
+    let ennesimo = i+1;
+    let nuovoElemento = Number(prompt("Inserisci il "+ ennesimo +"° elemento")); //number è un METODO per parsare la stringa in numero float
     decidiIfDispari(nuovoElemento);
-
 }
 console.log(arrayDiAddendi);
