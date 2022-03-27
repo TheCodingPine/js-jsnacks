@@ -3,35 +3,32 @@ Il programma stampa la somma di tutti i numeri inseriti.
 
 usiamo un array vuoto
 
-pusha 1, pusha 2, pusha 3 dal prompt if i<10
+for loop finchè non è 10, pushando nell'array
 
-else esco
+then, console.log(array)
 
-fuori, li elenco e li conto*/
+reduce.array
+
+print
+*/
 
 
 //la mia array
-let daSommare = [];
 
-/*let input1 = prompt("Primo numero");
-input1 = parseInt(input1);
-let input2 = prompt("Secondo numero");
-input2 = parseInt(input2);*/
-
+let arrayDiAddendi = [];
 
 for (let i=0; i<10; i++){
-    pushata = prompt("Inserisci un numero");
-    daSommare.push(pushata);
-    console.log(pushata);
+    let nuovoElemento = Number(prompt("Inserisci il "+(i+1)+"° elemento")); //number è un METODO per parsare la stringa in numero float
+    arrayDiAddendi.push(nuovoElemento);
 }
 
-console.log(daSommare);
+console.log(arrayDiAddendi);
 
-let somma = daSommare.reduce(getSum);
-console.log(somma);
-alert(somma);
+//reduce è un METODO che riduce gli elementi alla loro somma (o differenza)
+let valoreIniziale = 0;
 
-//aaaaaaaaaa
-function getSum(total, num) {
-  return total + num;
-}
+let addizione = arrayDiAddendi.reduce( //lancia una funzione che somma, restituisce il risultato, finché non soddisfa la condizione. A, B.
+  (valorePrecedente, valoreAttuale) => valorePrecedente + valoreAttuale,
+  valoreIniziale);
+
+console.log(addizione);
